@@ -1,0 +1,26 @@
+import { expect, Locator, Page } from '@playwright/test';
+
+export class HomePage{
+
+    // Define Selectors
+    readonly page:Page
+    readonly h1Header:Locator
+
+
+    // Initialize selectors using constructor
+    constructor(page:Page) {
+        this.page=page
+        this.h1Header= page.locator("h1[class='et_pb_module_heading']")
+    }
+
+    async visit() {
+        await this.page.goto("https://ultimateqa.com/")
+    }
+
+    async assertHomePage () {
+
+        await expect(this.h1Header).toBeVisible()
+        
+    }
+
+}
