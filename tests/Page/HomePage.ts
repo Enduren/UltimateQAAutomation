@@ -16,6 +16,7 @@ export class HomePage{
 
     }
 
+    //add functions down here
     async visit() {
         await this.page.goto("https://ultimateqa.com/")
     }
