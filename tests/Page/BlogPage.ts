@@ -13,4 +13,7 @@ export class BlogPage {
     }
 
     //add functions down here
+    async gotoBlogPage () {
+        this.blogTab.click()
+    }
 }

@@ -14,6 +14,7 @@ export class ServicePage {
 
     //add functions down here
     async gotoServicePage () {
+        this.serviceTab.click()
         
     }
 }

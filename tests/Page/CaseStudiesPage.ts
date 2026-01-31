@@ -8,9 +8,12 @@ export class CaseStudiesPage {
     // Initialize selectors using constructor
     constructor(page:Page) {
         this.page=page
-        this.caseStudiesTab = page.locator("(//a[@href='#'][normalize-space()='Education'])[1]")
+        this.caseStudiesTab = page.locator("//ul[@id='menu-main-menu']//a[normalize-space()='Case Studies']")
 
     }
 
     //add functions down here
+    async gotoCaseStudiesPage () {
+        this.caseStudiesTab.click()
+    }
 }

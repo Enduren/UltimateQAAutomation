@@ -13,4 +13,7 @@ export class NewsletterPage {
     }
 
     //add functions down here
+    async gotoNewslettersPage () {
+        this.newslettersTab.click()
+    }
 }

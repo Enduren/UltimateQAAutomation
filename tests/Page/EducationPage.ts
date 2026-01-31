@@ -13,4 +13,7 @@ export class EducationPage {
     }
 
     //add functions down here
+    async gotoEducationPage () {
+        this.educationPage.click()
+    }
 }

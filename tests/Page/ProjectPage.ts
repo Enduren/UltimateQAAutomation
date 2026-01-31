@@ -13,4 +13,9 @@ export class ProjectPage {
     }
 
     //add functions down here
+
+    async gotoProjectPage () {
+        this.projectsTab.click()
+        
+    }
 }
