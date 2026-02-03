@@ -70,6 +70,7 @@ test.describe('check Ultimate website', () => {
   test('Check That you are on the Service Page', async ({ page }) => {
     //goto Service Page
     await servicePage.gotoServicePage()
+    await servicePage.isTheBtnThere()
     await page.waitForTimeout(3000)
   });
 })
