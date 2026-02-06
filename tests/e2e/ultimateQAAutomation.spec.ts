@@ -73,6 +73,12 @@ test.describe('check Ultimate website', () => {
     await servicePage.isTheBtnThere()
     await page.waitForTimeout(3000)
   });
+  test('Check That you are on the Projects Page', async ({ page }) => {
+    //goto Projects Page
+    await projectsPage.gotoProjectPage()
+    await projectsPage.checkBtns()
+    await page.waitForTimeout(3000)
+  });
 })
 
 
