@@ -56,6 +56,7 @@ test.describe('check Ultimate website', () => {
     //goto Case Studies Page
     await caseStudiesPage.gotoCaseStudiesPage()
     await page.waitForTimeout(3000)
+    await caseStudiesPage.checkH1()
   });
   test('Check That you are on the Education Page', async ({ page }) => {
     //goto Education Page
