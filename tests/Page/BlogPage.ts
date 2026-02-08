@@ -4,16 +4,22 @@ export class BlogPage {
     // Define Selectors
     readonly page:Page
     readonly blogTab: Locator
+    readonly blogH1Text: Locator
 
     // Initialize selectors using constructor
     constructor(page:Page) {
         this.page=page
         this.blogTab = page.locator("(//a[normalize-space()='Blog'])[1]")
+        this.blogH1Text= page.locator("//span[contains(text(),'Blog')]")
 
     }
 
     //add functions down here
     async gotoBlogPage () {
         this.blogTab.click()
+    }
+
+    async verifyBlogText () {
+        await expect(this.blogH1Text).toBeVisible()
     }
 }

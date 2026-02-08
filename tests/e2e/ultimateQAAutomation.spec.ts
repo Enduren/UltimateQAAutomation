@@ -42,44 +42,61 @@ test.describe('check Ultimate website', () => {
     //check to see h1 is visible
     await homePage.assertHomePage()
   });
-  test('Check That you are on the About Page', async ({ page }) => {
-    //goto About Page
-    await aboutPage.gotoAboutPage()
+
+   test('Check That you are on the Service Page', async ({ page }) => {
+    //goto Service Page
+    await servicePage.gotoServicePage()
     await page.waitForTimeout(3000)
+    await servicePage.isTheBtnThere()
+    
   });
-  test('Check That you are on the Blog Page', async ({ page }) => {
-    //goto Blog Page
-    await blogPage.gotoBlogPage()
+
+  test('Check That you are on the Projects Page', async ({ page }) => {
+    //goto Projects Page
+    await projectsPage.gotoProjectPage()
     await page.waitForTimeout(3000)
+    await projectsPage.checkBtns()
+    
   });
-  test('Check That you are on the Case Studies Page', async ({ page }) => {
+
+   test('Check That you are on the Case Studies Page', async ({ page }) => {
     //goto Case Studies Page
     await caseStudiesPage.gotoCaseStudiesPage()
     await page.waitForTimeout(3000)
     await caseStudiesPage.checkH1()
   });
-  test('Check That you are on the Education Page', async ({ page }) => {
-    //goto Education Page
-    await educationPage.gotoEducationPage()
+
+  test('Check That you are on the Blog Page', async ({ page }) => {
+    //goto Blog Page
+    await blogPage.gotoBlogPage()
     await page.waitForTimeout(3000)
+    await blogPage.verifyBlogText()
+
   });
+
   test('Check That you are on the Newsletter Page', async ({ page }) => {
     //goto Newsletters Page
     await newsletterPage.gotoNewslettersPage()
     await page.waitForTimeout(3000)
   });
-  test('Check That you are on the Service Page', async ({ page }) => {
-    //goto Service Page
-    await servicePage.gotoServicePage()
-    await servicePage.isTheBtnThere()
+
+  test('Check That you are on the Education Page', async ({ page }) => {
+    //goto Education Page
+    await educationPage.gotoEducationPage()
     await page.waitForTimeout(3000)
   });
-  test('Check That you are on the Projects Page', async ({ page }) => {
-    //goto Projects Page
-    await projectsPage.gotoProjectPage()
-    await projectsPage.checkBtns()
+
+  test('Check That you are on the About Page', async ({ page }) => {
+    //goto About Page
+    await aboutPage.gotoAboutPage()
     await page.waitForTimeout(3000)
   });
+  
+ 
+  
+  
+ 
+  
 })
 
 
