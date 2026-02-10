@@ -78,6 +78,7 @@ test.describe('check Ultimate website', () => {
     //goto Newsletters Page
     await newsletterPage.gotoNewslettersPage()
     await page.waitForTimeout(3000)
+    await newsletterPage.checkEmail()
   });
 
   test('Check That you are on the Education Page', async ({ page }) => {
