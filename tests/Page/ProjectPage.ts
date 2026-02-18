@@ -28,6 +28,7 @@ export class ProjectPage {
 
         await expect(this.freeStrategyCallBtn).toBeVisible()
        await expect(this.freeStrategyCallBtn).toBeVisible()
+       await expect(this.page).toHaveScreenshot({ fullPage: true});
         
     }
 }
