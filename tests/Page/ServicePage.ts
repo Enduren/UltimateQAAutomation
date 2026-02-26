@@ -23,5 +23,6 @@ export class ServicePage {
     //check for button
     async isTheBtnThere () {
         await expect(this.schSessionBtn).toBeVisible()
+        await expect(this.page).toHaveScreenshot()
     }
 }
