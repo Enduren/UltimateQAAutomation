@@ -41,6 +41,7 @@ test.describe('check Ultimate website', () => {
   test('Check That you are on the Home Page', async ({ page }) => {
     //check to see h1 is visible
     await homePage.assertHomePage()
+    await expect(page).toHaveScreenshot()
   });
 
    test('Check That you are on the Service Page', async ({ page }) => {
