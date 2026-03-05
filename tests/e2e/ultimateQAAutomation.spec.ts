@@ -49,6 +49,7 @@ test.describe('check Ultimate website', () => {
     await servicePage.gotoServicePage()
     await page.waitForTimeout(3000)
     await servicePage.isTheBtnThere()
+    await expect(page).toHaveScreenshot()
     
   });
 
